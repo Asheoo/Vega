@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vega starter</title>
+    <link rel="shortcut icon" href="Images/favicon.ico">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="page">
+            
+            <div class="img">
+                <div class="container">
+                    
+                  <div id="pop" >
+
+                      <span class="button" @click="modalAction()">
+                          <img  class="icon icon-plus" src="icons/icon-plus.svg" alt="Add New Item">
+                      </span>
+
+                      <transition name="fade">
+                        <div class="modal-wrap" v-if="showModal" @click.self="modalAction()" >
+                            <div class="modal" >
+                                <h2>Create a task today:</h2>
+                                <form action >
+                                    <div class="field-wrap">
+                                        <input v-model="task" class="field" type="text" placeholder="Title..">
+                                    </div>
+                                    <div class="btn-wrap">
+                                        <input @click.prevent="modalAction()" class="btn" type="submit" value="Create">
+                                    </div>
+                                </form>
+                            </div>
+                      </transition> 
+                      
+                      
+                        </div>
+                    
+                        
+                 </div>  
+                    
+                    
+                    <div id="main" class="quote-block" >
+                        <h1 class="quote">Happiness is good health and a bad memory</h1>
+                        <h2 class="name">- Ingrid Bergman</h2>
+                        
+                    </div>
+                    
+                    
+                </div>
+
+                <div class="bg">
+
+                <div class="container">
+
+                    <div class="wrap">
+                        <img class="logo" src="images/vegait-logo.svg" alt="Logo">
+                        <div id="day" class="date">
+                            <img class="icon" src="images/icon-calendar.svg" alt="Calendar">
+                            <h2>{{currentDate()}}</h2>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            </div>
+            
+            <div class="main">
+
+                <div id="str" class="container">
+                    <div class="copy" v-for="task in todo" >
+                        <label class="box" >
+                            
+                            <span class="task">{{task.bla}}</span>
+                            <span class="checkbox">
+                                <input class="checkbox-native" type="checkbox">
+                                <span class="checkmark">
+                                    <svg viewBox="0 0 24 24">
+                                        <path class="checkmark-icon" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                    </svg>
+                                </span>
+                            </span>
+                            
+                        </label>
+                    </div>
+                </div> 
+                
+            </div>
+
+            
+            
+            
+
+                <div class="footer">
+                    <div class="container">
+                        <span class="copy">© 2018 Vega IT Sourcing</span>
+                    </div>
+                </div>
+                
+            
+        
+        
+    </div>
+        
+
+
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="main.js"></script>
+</body>
+</html>
