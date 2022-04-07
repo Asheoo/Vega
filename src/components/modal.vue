@@ -1,6 +1,6 @@
 <template>
         <transition name="fade">
-            <div class="modal-wrap" >
+            <div class="modal-wrap" @click.self.prevent="$emit('close')" >
                 <div class="modal" >
                     <h2>Create a task today:</h2>
                     <form action >

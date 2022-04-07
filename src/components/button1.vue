@@ -2,7 +2,7 @@
 <div>
 
      <span class="button" >
-                <img  @click="$emit('open')"  class="icon icon-plus" src="../assets/icon-plus.svg" alt="Add New Item">
+                <img   class="icon icon-plus" src="../assets/icon-plus.svg" alt="Add New Item">
      </span>
 
      
@@ -15,7 +15,7 @@
 
 export default ({
     name:"button1",
-    emits:['open']
+    
    
 
 });

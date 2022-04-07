@@ -1,6 +1,6 @@
 <template>
     <div class="page">
-        <modal v-show="showModal" @close="showModal=false" @open="showModal=true"/>
+        <modal v-show="showModal" @close="showModal=false" />
         <div class="img">
             <div class="container">
 
