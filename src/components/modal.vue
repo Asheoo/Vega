@@ -5,10 +5,10 @@
                     <h2>Create a task today:</h2>
                     <form action >
                         <div class="field-wrap">
-                            <input v-model="task" class="field" type="text" placeholder="Title..">
+                            <input class="field" type="text" placeholder="Title..">
                         </div>
                         <div class="btn-wrap" >
-                            <input @click.prevent="$emit('close')" class="btn" type="submit" value="Create">
+                            <input @click.prevent="$emit('close')"  class="btn" type="submit" value="Create">
                         </div>
                     </form>
                 </div>
@@ -18,10 +18,13 @@
 </template>
 
 <script>
-    export default ({
+	
+	
+    export default {
         name:'modal',
         emits:'close',
-    });
+		
+    };
 </script>
 
 <style>

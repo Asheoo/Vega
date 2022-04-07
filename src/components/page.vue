@@ -22,7 +22,7 @@
     import button1 from "./button1.vue"
     import quote from "./quote.vue"
     import date from "./date.vue"
-    import todo from "./todo.vue";
+    import todo from "./todo.vue"
     import foter from "./footer.vue"
     import modal from "./modal.vue"
 

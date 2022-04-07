@@ -25,15 +25,18 @@
 <script>
     export default {
         name:'todo',
-    data(){
+        props:['bla'],
+   data(){
           return{
+             newItem:'',
              todo:[
                   {bla:"Pick up drycleaning"},
                   {bla:"Study for exam"},
                   {bla:"Drink beer"},
-             ]
+             ],
           }
       },
+
     }
 </script>
 
