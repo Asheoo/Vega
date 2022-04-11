@@ -5,26 +5,52 @@
                     <h2>Create a task today:</h2>
                     <form action >
                         <div class="field-wrap">
-                            <input class="field" type="text" placeholder="Title..">
+                            <input v-model="store.searchTerm"  class="field" type="text" placeholder="Title..">
                         </div>
                         <div class="btn-wrap" >
-                            <input @click.prevent="$emit('close')"  class="btn" type="submit" value="Create">
+                            <input @click.prevent="$emit('close')"  @click="addItem" class="btn" type="submit" value="Create">
                         </div>
                     </form>
+					<h2>{{store.search}}</h2>
                 </div>
+				
             </div>
-        </transition> 
+			
+        </transition>
+		
                
 </template>
 
 <script>
-	
-	
+	import store from '../store';
+
     export default {
         name:'modal',
         emits:'close',
+		data(){
+			return {
+			store:store,
+			/*items:[
+				{
+					name:'uradi nesto'
+				}
+			]*/
+		}
 		
-    };
+    },
+	methods:{
+		addItem:function(){
+			
+			store.search.push({
+				name:store.searchTerm,
+			});
+			
+			store.searchTerm='';		
+		}
+		
+	},
+	
+	};
 </script>
 
 <style>

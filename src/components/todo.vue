@@ -2,10 +2,10 @@
     <div class="main">
 
                 <div id="str" class="container">
-                    <div class="copy"  v-for="task in todo" :key="task">
+                    <div class="copy"  v-for="task in store.search" :key="task">
                         <label class="box" >
                             
-                            <span class="task">{{task.bla}}</span>
+                            <span class="task" >{{task.name}}</span>
                             <span class="checkbox">
                                 <input class="checkbox-native" type="checkbox">
                                 <span class="checkmark">
@@ -17,25 +17,33 @@
                             
                         </label>
                     </div>
-                </div> 
-                
-            </div>
+                 </div> 
+            </div> 
 </template>
 
 <script>
+    import store from "../store";
+    
     export default {
         name:'todo',
-        props:['bla'],
-   data(){
+        
+        data(){
           return{
-             newItem:'',
-             todo:[
+              
+             
+             store:store,
+             /*todo:[
                   {bla:"Pick up drycleaning"},
                   {bla:"Study for exam"},
                   {bla:"Drink beer"},
-             ],
+             ],*/
           }
+          
       },
+      
+     
+      
+      
 
     }
 </script>
